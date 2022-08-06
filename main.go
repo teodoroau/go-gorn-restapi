@@ -1,16 +1,19 @@
 package main
 
 import (
-	"github.com/gorilla/mux"
+	"fmt"
 	"net/http"
+
+	"github.com/gorilla/mux"
+	"github.com/teodoroau/go-gorn-restapi/routes"
 )
 
 func main() {
 	r := mux.NewRouter()
 
-	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Hello World!"))
-	})
-	
+	r.HandleFunc("/", routes.HomeHandler)
+
+	fmt.Println("Servidor iniciado")
 	http.ListenAndServe("50.116.46.121:8080", r)
+
 }
