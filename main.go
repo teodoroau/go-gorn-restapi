@@ -8,13 +8,13 @@ import (
 	"github.com/teodoroau/go-gorn-restapi/routes"
 )
 
-// IP = 50.116.46.121
-
 func main() {
+	IP := "50.116.46.121"
+
 	r := mux.NewRouter()
 
 	r.HandleFunc("/", routes.HomeHandler)
 
 	fmt.Println("Servidor iniciado")
-	http.ListenAndServe(":8080", r)
+	http.ListenAndServe(IP + ":8080", r)
 }
