@@ -9,12 +9,12 @@ import (
 )
 
 func main() {
-	IP := "50.116.46.121"
+	// IP := "50.116.46.121"
 
 	r := mux.NewRouter()
 
 	r.HandleFunc("/", routes.HomeHandler)
 
 	fmt.Println("Servidor iniciado")
-	http.ListenAndServe(IP + ":8080", r)
+	http.ListenAndServe(":8080", r)
 }
