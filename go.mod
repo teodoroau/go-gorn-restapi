@@ -1,4 +1,4 @@
-module github.com/teodoroau/go-gorm-restapi
+module github.com/teodoroau/go-gorn-restapi
 
 go 1.17
 
